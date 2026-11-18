@@ -1,0 +1,44 @@
+/* Editorial redesign — original styling inspired by minimalist photographic portfolios */
+:root{--paper:#f1f0eb;--ink:#171816;--accent:#b99a6c}
+html{scroll-behavior:smooth}
+body.editorial-design{background:var(--paper);color:var(--ink);font-family:"Poppins",sans-serif}
+.editorial-topbar{height:84px;padding:0 clamp(22px,5vw,96px);display:flex;align-items:center;justify-content:space-between;background:#f1f0eb;border-bottom:1px solid #d7d4cd}
+.editorial-wordmark{font-size:18px;font-weight:600;letter-spacing:.14em;color:#181818;text-decoration:none}
+.editorial-wordmark span{font-size:10px;letter-spacing:.12em;font-weight:400;color:#777}
+.editorial-toplink{color:#191919;font-size:11px;letter-spacing:.16em;font-weight:600;text-decoration:none}
+.editorial-hero{min-height:min(740px,85vh);display:grid;grid-template-columns:1fr 43%;background:#151817;color:#fff;overflow:hidden}
+.editorial-hero-inner{padding:clamp(50px,8vw,130px) 6vw 70px;display:flex;flex-direction:column;align-items:flex-start;justify-content:center}
+.editorial-eyebrow{font-size:10px;letter-spacing:.24em;color:#c6bca9;margin-bottom:38px}
+.editorial-hero h2{font-family:Georgia,serif;font-size:clamp(76px,10vw,180px);font-weight:400;letter-spacing:-.075em;line-height:.88;color:#f5f1e8;margin:0 0 36px}
+.editorial-hero h2 em{font-weight:400;color:#c7ad88}
+.editorial-hero-desc{font-size:clamp(14px,1.3vw,18px);line-height:1.8;max-width:400px;color:#d2d0ca}
+.editorial-hero-cta{display:flex;align-items:center;gap:48px;margin-top:42px;padding:17px 0;border-bottom:1px solid #a89980;color:#fff;font-size:11px;letter-spacing:.18em;text-decoration:none}
+.editorial-hero-cta span{font-size:22px}
+.editorial-hero-art{position:relative;background:radial-gradient(ellipse at 60% 42%,#65665e 0%,#373d39 37%,#222723 67%,#101411 100%);display:flex;align-items:center;justify-content:center;overflow:hidden}
+.editorial-hero-art:before,.editorial-hero-art:after{content:"";position:absolute;width:85%;aspect-ratio:1;border:1px solid #ffffff2b;border-radius:50%;transform:rotate(-25deg) scaleX(.64)}
+.editorial-hero-art:after{width:112%;transform:rotate(35deg) scaleX(.67)}
+.editorial-hero-art>span{font-family:Georgia,serif;font-size:clamp(130px,22vw,380px);font-weight:400;letter-spacing:-.14em;color:#e5e1d6;text-shadow:20px 28px 55px #0008;transform:translateX(-.06em)}
+.editorial-art-caption{position:absolute;bottom:35px;right:35px;font-size:9px;letter-spacing:.22em;color:#ddd6c9}
+body.editorial-design main{margin:0 auto;padding:100px 5vw 110px;max-width:1480px;display:grid;grid-template-columns:280px minmax(0,1fr);gap:40px}
+body.editorial-design .sidebar,body.editorial-design .main-content{background:#fff;border:1px solid #e1ded7;box-shadow:none;border-radius:0}
+body.editorial-design .sidebar{position:sticky;top:22px;align-self:start;max-height:calc(100vh - 44px);overflow:auto}
+body.editorial-design .main-content{min-width:0}
+body.editorial-design .navbar{background:#f8f7f4;border-radius:0;border-bottom:1px solid #e8e5df}
+body.editorial-design .navbar-link.active{color:#a07845}
+body.editorial-design .navbar-link:hover{color:#a07845}
+body.editorial-design .article-title{color:#191919;font-family:Georgia,serif;font-weight:400;font-size:clamp(35px,4vw,62px)}
+body.editorial-design .article-title:after{background:#b99a6c}
+body.editorial-design .h3,body.editorial-design .h4,body.editorial-design .name,body.editorial-design .contact-title{color:#222}
+body.editorial-design .about-text p,body.editorial-design .timeline-text,body.editorial-design .service-item-text,body.editorial-design .project-status,body.editorial-design .form-text{color:#555}
+body.editorial-design .service-item,body.editorial-design .content-card,body.editorial-design .project-item{background:#f6f5f2;border:1px solid #e8e5de;box-shadow:none;border-radius:2px}
+body.editorial-design .title,body.editorial-design .icon-box{background:#eae7df;color:#7f684c}
+body.editorial-design .timeline-item-title,body.editorial-design .contact-link,body.editorial-design .navbar-link,body.editorial-design .social-link,body.editorial-design address{color:#363636}
+body.editorial-design .timeline-list:before{background:#ded8cd}
+body.editorial-design .timeline-item:after{background:#b99a6c}
+body.editorial-design .timeline-item>span{color:#96764d}
+body.editorial-design .avatar-box{background:#ece8df}
+body.editorial-design .project-profile-link{color:#84653d}
+.editorial-footer{background:#151817;color:#c9c9c3;padding:35px 5vw;display:flex;gap:20px;justify-content:space-between;font-size:10px;letter-spacing:.13em}
+.editorial-footer a{color:#e6d5bd;text-decoration:none}
+@media(max-width:1000px){body.editorial-design main{grid-template-columns:1fr;padding:50px 4vw}body.editorial-design .sidebar{position:static;max-height:none}.editorial-hero{grid-template-columns:1fr 38%}.editorial-wordmark span{display:none}}
+@media(max-width:650px){.editorial-topbar{height:66px}.editorial-wordmark{font-size:14px}.editorial-toplink{font-size:9px}.editorial-hero{grid-template-columns:1fr;min-height:0}.editorial-hero-inner{min-height:520px;padding:65px 7vw}.editorial-hero h2{font-size:clamp(72px,17vw,112px)}.editorial-hero-art{height:260px}.editorial-hero-art>span{font-size:170px}.editorial-art-caption{bottom:18px;right:20px;font-size:8px}body.editorial-design main{padding:35px 14px 70px;gap:20px}.editorial-footer{flex-wrap:wrap;line-height:2}}
