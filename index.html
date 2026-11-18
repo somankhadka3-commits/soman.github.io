@@ -50,6 +50,7 @@
         <li class="navbar-item"><button class="navbar-link active" data-nav-link type="button">About</button></li>
         <li class="navbar-item"><button class="navbar-link" data-nav-link type="button">Resume</button></li>
         <li class="navbar-item"><button class="navbar-link" data-nav-link type="button">Portfolio</button></li>
+        <li class="navbar-item"><button class="navbar-link" data-nav-link type="button">Photos</button></li>
         <li class="navbar-item"><button class="navbar-link" data-nav-link type="button">Contact</button></li>
       </ul>
     </nav>
@@ -124,6 +125,16 @@
         <p class="project-status" id="projects-status" aria-live="polite">Loading projects from GitHub…</p>
         <ul class="project-list" id="github-project-list"></ul>
       </section>
+    </article>
+    <article class="photos" data-page="photos">
+      <header><h2 class="h2 article-title">Photos</h2></header>
+      <section class="photo-intro">
+        <p>A collection of moments, places, and perspectives. Browse my personal photo gallery.</p>
+        <a class="photo-upload-link" href="https://github.com/somankhadka3-commits/soman.github.io/upload/main/assets/images/gallery" target="_blank" rel="noopener noreferrer">Upload photos (owner) ↗</a>
+      </section>
+      <p class="photo-status" id="photo-status" aria-live="polite">Loading photos…</p>
+      <div class="photo-gallery" id="photo-gallery"></div>
+      <dialog class="photo-lightbox" id="photo-lightbox" aria-label="Photo preview"><button type="button" class="photo-close" id="photo-close" aria-label="Close photo">×</button><img id="photo-preview" alt=""><p id="photo-caption"></p></dialog>
     </article>
     <article class="contact" data-page="contact">
       <header><h2 class="h2 article-title">Contact</h2></header>
