@@ -137,3 +137,18 @@ body.editorial-design .main-content .navbar-link.active{color:#765321!important}
 body.editorial-design .main-content .form-input{background:#2a2a2a!important;color:#fff!important;border-color:#8a8a8a!important}
 body.editorial-design .main-content .form-input::placeholder{color:#ddd!important}
 body.editorial-design .main-content .photo-upload-link{background:#e8d6b6;color:#171717!important}
+
+/* Navigation in its own top row — never overlap page titles. */
+body.editorial-design .main-content{display:flex!important;flex-direction:column!important;overflow:hidden}
+body.editorial-design .main-content .navbar{position:relative!important;inset:auto!important;top:auto!important;right:auto!important;bottom:auto!important;left:auto!important;width:100%!important;max-width:100%!important;flex:none!important;z-index:2!important;box-shadow:none!important;border-radius:0!important;padding:0 18px!important}
+body.editorial-design .main-content .navbar-list{display:flex!important;justify-content:flex-end!important;flex-wrap:wrap!important;gap:0 8px!important}
+body.editorial-design .main-content .navbar-link{padding:18px 12px!important;white-space:nowrap!important}
+body.editorial-design .main-content article{width:100%!important;max-width:100%!important;margin:0!important;box-sizing:border-box!important}
+body.editorial-design .main-content article.active{display:block!important}
+body.editorial-design .main-content article header{padding-top:12px}
+@media(max-width:650px){
+body.editorial-design .main-content .navbar{padding:0 8px!important}
+body.editorial-design .main-content .navbar-list{justify-content:center!important;gap:0 2px!important}
+body.editorial-design .main-content .navbar-link{padding:14px 8px!important;font-size:12px!important}
+body.editorial-design .main-content article header{padding-top:8px}
+}
