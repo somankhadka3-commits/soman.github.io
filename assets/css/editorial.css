@@ -102,3 +102,38 @@ body.editorial-design .photo-lightbox p{color:#fff!important;text-align:center;m
 body.editorial-design .photo-close{position:absolute;right:10px;top:5px;color:white;background:#000a;border:0;font-size:30px;cursor:pointer;padding:0 10px}
 @media(max-width:850px){body.editorial-design .photo-gallery{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:480px){body.editorial-design .photo-gallery{grid-template-columns:1fr 1fr;gap:8px}body.editorial-design .photo-tile span{font-size:11px}body.editorial-design .photo-upload-link{width:100%;text-align:center}}
+
+/* Fix contrast on the dark content panel (sidebar stays light). */
+body.editorial-design .main-content{background:#1f1f1f!important;color:#f6f6f6!important;border-color:#343434!important}
+body.editorial-design .main-content .article-title,
+body.editorial-design .main-content .h3,
+body.editorial-design .main-content .h4,
+body.editorial-design .main-content .h5,
+body.editorial-design .main-content h2,
+body.editorial-design .main-content h3,
+body.editorial-design .main-content h4,
+body.editorial-design .main-content h5{color:#fff!important}
+body.editorial-design .main-content p,
+body.editorial-design .main-content .about-text p,
+body.editorial-design .main-content .timeline-text,
+body.editorial-design .main-content .service-item-text,
+body.editorial-design .main-content .project-status,
+body.editorial-design .main-content .form-text,
+body.editorial-design .main-content .photo-status,
+body.editorial-design .main-content .photo-intro p{color:#e5e5e5!important}
+body.editorial-design .main-content .service-item,
+body.editorial-design .main-content .content-card,
+body.editorial-design .main-content .project-item{background:#2a2a2a!important;border:1px solid #555!important}
+body.editorial-design .main-content .project-item p,
+body.editorial-design .main-content .project-item span,
+body.editorial-design .main-content .skills-item h5{color:#f0f0f0!important}
+body.editorial-design .main-content .timeline-item-title{color:#fff!important}
+body.editorial-design .main-content .timeline-item>span{color:#f1c783!important}
+body.editorial-design .main-content .project-list a,
+body.editorial-design .main-content .project-profile-link{color:#f1c783!important}
+body.editorial-design .main-content .navbar{background:#f8f7f4!important}
+body.editorial-design .main-content .navbar-link{color:#282828!important}
+body.editorial-design .main-content .navbar-link.active{color:#765321!important}
+body.editorial-design .main-content .form-input{background:#2a2a2a!important;color:#fff!important;border-color:#8a8a8a!important}
+body.editorial-design .main-content .form-input::placeholder{color:#ddd!important}
+body.editorial-design .main-content .photo-upload-link{background:#e8d6b6;color:#171717!important}
