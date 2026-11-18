@@ -172,3 +172,46 @@ body.editorial-design .main-content article header{padding-top:8px}
 @media(max-width:850px){.editorial-values{grid-template-columns:repeat(2,minmax(0,1fr))}.editorial-hero h2{font-size:clamp(52px,8vw,84px)}}
 @media(max-width:650px){.editorial-hero{grid-template-columns:1fr}.editorial-hero-inner{min-height:440px;padding:55px 7vw 45px}.editorial-hero h2{font-size:clamp(48px,11vw,74px)}.editorial-hero-art{height:220px}.editorial-values{padding:24px 6vw 40px;gap:10px}.editorial-value{padding:16px}.editorial-value h3{font-size:17px}.editorial-value p{font-size:12px}}
 @media(prefers-reduced-motion:reduce){.editorial-hero-inner,.editorial-hero-art{animation:none}.editorial-value,.editorial-hero-cta{transition:none}}
+
+/* Cinematic motion system: subtle, performant, and readable */
+@keyframes ambient-drift{0%,100%{transform:translate3d(-2%,0,0) scale(1)}50%{transform:translate3d(3%,-2%,0) scale(1.08)}}
+@keyframes orbit-slow{from{transform:rotate(0deg) scaleX(.64)}to{transform:rotate(360deg) scaleX(.64)}}
+@keyframes glow-pulse{0%,100%{opacity:.35}50%{opacity:.72}}
+@keyframes reveal-up{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
+@keyframes arrow-nudge{0%,100%{transform:translate(0,0)}50%{transform:translate(5px,-5px)}}
+@keyframes accent-sweep{from{background-position:200% center}to{background-position:-200% center}}
+.editorial-hero{isolation:isolate}
+.editorial-hero-art{isolation:isolate}
+.editorial-hero-art:before{animation:orbit-slow 35s linear infinite;will-change:transform}
+.editorial-hero-art:after{animation:orbit-slow 48s linear infinite reverse;will-change:transform}
+.editorial-hero-art>span{position:relative;z-index:1;animation:glow-pulse 7s ease-in-out infinite}
+.editorial-hero-art .editorial-art-caption{z-index:2}
+.editorial-hero-inner>*{animation:reveal-up .8s cubic-bezier(.2,.7,.2,1) both}
+.editorial-hero-inner>*:nth-child(2){animation-delay:.12s}
+.editorial-hero-inner>*:nth-child(3){animation-delay:.25s}
+.editorial-hero-inner>*:nth-child(4){animation-delay:.38s}
+.editorial-hero h2 em{background:linear-gradient(100deg,#d9bd91,#fff1d5,#c7ad88,#e9d4ae);background-size:220% auto;background-clip:text;-webkit-background-clip:text;color:transparent!important;-webkit-text-fill-color:transparent;animation:accent-sweep 12s ease-in-out infinite}
+.editorial-hero-cta span{display:inline-block;animation:arrow-nudge 2.6s ease-in-out infinite}
+.editorial-value{transition:transform .35s cubic-bezier(.2,.7,.2,1),border-color .35s,box-shadow .35s}
+.editorial-value:hover{transform:translateY(-8px);box-shadow:0 16px 40px #0005}
+body.editorial-design .main-content .service-item,
+body.editorial-design .main-content .project-item,
+body.editorial-design .photo-tile{transition:transform .3s ease,box-shadow .3s ease,border-color .3s ease}
+body.editorial-design .main-content .service-item:hover,
+body.editorial-design .main-content .project-item:hover{transform:translateY(-5px);border-color:#c7ad88!important;box-shadow:0 12px 30px #0003}
+body.editorial-design .main-content .navbar-link{position:relative;transition:color .25s ease}
+body.editorial-design .main-content .navbar-link:after{content:"";position:absolute;bottom:8px;left:12px;right:12px;height:2px;background:#a47c40;transform:scaleX(0);transform-origin:center;transition:transform .3s ease}
+body.editorial-design .main-content .navbar-link:hover:after,
+body.editorial-design .main-content .navbar-link.active:after{transform:scaleX(1)}
+body.editorial-design .main-content article.active{animation:reveal-up .42s ease both}
+@media(prefers-reduced-motion:reduce){
+.editorial-hero-art:before,.editorial-hero-art:after,.editorial-hero-art>span,
+.editorial-hero-inner>*,.editorial-hero h2 em,.editorial-hero-cta span,
+body.editorial-design .main-content article.active{animation:none!important}
+.editorial-value,body.editorial-design .main-content .service-item,
+body.editorial-design .main-content .project-item,
+body.editorial-design .main-content .navbar-link,
+body.editorial-design .main-content .navbar-link:after{transition:none!important}
+.editorial-value:hover,body.editorial-design .main-content .service-item:hover,
+body.editorial-design .main-content .project-item:hover{transform:none!important}
+}
