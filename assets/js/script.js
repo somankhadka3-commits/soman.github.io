@@ -103,3 +103,54 @@ async function loadGitHubProjects() {
   }
 }
 loadGitHubProjects();
+
+
+// Public photo gallery. Upload images to the repository's gallery folder to publish.
+const gallery = document.getElementById("photo-gallery");
+const photoStatus = document.getElementById("photo-status");
+const lightbox = document.getElementById("photo-lightbox");
+const preview = document.getElementById("photo-preview");
+const caption = document.getElementById("photo-caption");
+const closePhoto = document.getElementById("photo-close");
+if (closePhoto && lightbox) closePhoto.addEventListener("click", () => lightbox.close());
+if (lightbox) lightbox.addEventListener("click", (event) => { if (event.target === lightbox) lightbox.close(); });
+async function loadPhotos() {
+  if (!gallery || !photoStatus) return;
+  try {
+    const response = await fetch("https://api.github.com/repos/somankhadka3-commits/soman.github.io/contents/assets/images/gallery");
+    if (!response.ok) throw new Error("Could not load photos");
+    const files = await response.json();
+    const images = files.filter((file) => file.type === "file" && /\.(jpe?g|png|webp|gif)$/i.test(file.name)).sort((a,b) => a.name.localeCompare(b.name));
+    gallery.replaceChildren();
+    if (!images.length) {
+      photoStatus.textContent = "No photos uploaded yet. Use the Upload photos link above to add your first images.";
+      return;
+    }
+    images.forEach((file) => {
+      const title = file.name.replace(/\.[^.]+$/, "").replace(/[-_]/g, " ");
+      const button = document.createElement("button");
+      button.type = "button";
+      button.className = "photo-tile";
+      button.setAttribute("aria-label", "View photo: " + title);
+      const img = document.createElement("img");
+      img.src = "./assets/images/gallery/" + encodeURIComponent(file.name);
+      img.alt = title;
+      img.loading = "lazy";
+      const label = document.createElement("span");
+      label.textContent = title;
+      button.append(img, label);
+      button.addEventListener("click", () => {
+        if (!lightbox || !preview || !caption) return;
+        preview.src = img.src;
+        preview.alt = title;
+        caption.textContent = title;
+        lightbox.showModal();
+      });
+      gallery.append(button);
+    });
+    photoStatus.textContent = images.length + (images.length === 1 ? " photo" : " photos");
+  } catch (error) {
+    photoStatus.textContent = "Photos are temporarily unavailable. Please try again later.";
+  }
+}
+loadPhotos();
