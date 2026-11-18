@@ -42,3 +42,43 @@ body.editorial-design .project-profile-link{color:#84653d}
 .editorial-footer a{color:#e6d5bd;text-decoration:none}
 @media(max-width:1000px){body.editorial-design main{grid-template-columns:1fr;padding:50px 4vw}body.editorial-design .sidebar{position:static;max-height:none}.editorial-hero{grid-template-columns:1fr 38%}.editorial-wordmark span{display:none}}
 @media(max-width:650px){.editorial-topbar{height:66px}.editorial-wordmark{font-size:14px}.editorial-toplink{font-size:9px}.editorial-hero{grid-template-columns:1fr;min-height:0}.editorial-hero-inner{min-height:520px;padding:65px 7vw}.editorial-hero h2{font-size:clamp(72px,17vw,112px)}.editorial-hero-art{height:260px}.editorial-hero-art>span{font-size:170px}.editorial-art-caption{bottom:18px;right:20px;font-size:8px}body.editorial-design main{padding:35px 14px 70px;gap:20px}.editorial-footer{flex-wrap:wrap;line-height:2}}
+
+/* Readability and accessible contrast overrides */
+body.editorial-design .main-content,
+body.editorial-design .sidebar{color:#202020}
+body.editorial-design .main-content p,
+body.editorial-design .sidebar p,
+body.editorial-design .timeline-text,
+body.editorial-design .service-item-text,
+body.editorial-design .project-status,
+body.editorial-design .form-text,
+body.editorial-design .contact-info address,
+body.editorial-design .about-text p{color:#343434!important;line-height:1.8}
+body.editorial-design .main-content h2,
+body.editorial-design .main-content h3,
+body.editorial-design .main-content h4,
+body.editorial-design .main-content h5,
+body.editorial-design .sidebar h1,
+body.editorial-design .sidebar h2{color:#161616!important}
+body.editorial-design .navbar-link{color:#282828!important;font-weight:600}
+body.editorial-design .navbar-link.active{color:#765321!important}
+body.editorial-design .contact-title{color:#555!important}
+body.editorial-design .contact-link,
+body.editorial-design .social-link,
+body.editorial-design .project-profile-link,
+body.editorial-design .project-list a{color:#60441f!important}
+body.editorial-design .timeline-item>span{color:#765321!important}
+body.editorial-design .project-item p,
+body.editorial-design .project-item span,
+body.editorial-design .skills-item h5{color:#292929!important}
+body.editorial-design .form-input,
+body.editorial-design textarea{background:#fff!important;color:#171717!important;border:1px solid #777!important}
+body.editorial-design .form-input::placeholder,
+body.editorial-design textarea::placeholder{color:#595959!important}
+body.editorial-design .form-btn{color:#332511!important;background:#e7d2a8!important}
+body.editorial-design .editorial-hero h2{color:#f5f1e8!important}
+body.editorial-design .editorial-hero-desc{color:#f1eee8!important}
+body.editorial-design .editorial-eyebrow{color:#e5d7c1!important}
+body.editorial-design a:focus-visible,
+body.editorial-design button:focus-visible{outline:3px solid #a47c40;outline-offset:3px}
+@media(max-width:650px){body.editorial-design .main-content p,body.editorial-design .sidebar p{font-size:15px}}
