@@ -1,982 +1,128 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Soman Khadka</title>
-
-  <!--
-    - favicon
-  -->
+  <meta name="description" content="Soman Khadka — business, finance and technology professional based in Kathmandu, Nepal.">
+  <title>Soman Khadka | Personal Portfolio</title>
   <link rel="shortcut icon" href="https://raw.githubusercontent.com/codewithsadee/vcard-personal-portfolio/master/assets/images/logo.ico" type="image/x-icon">
-
-  <!--
-    - custom css link
-  -->
   <link rel="stylesheet" href="./assets/css/style.css">
-
-  <!--
-    - google font link
-  -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
-
 <body>
-
-  <!--
-    - #MAIN
-  -->
-
-  <main>
-
-    <!--
-      - #SIDEBAR
-    -->
-
-    <aside class="sidebar" data-sidebar>
-
-      <div class="sidebar-info">
-
-        <figure class="avatar-box">
-          <img src="https://raw.githubusercontent.com/codewithsadee/vcard-personal-portfolio/master/assets/images/my-avatar.png" alt="Soman Khadka" width="80">
-        </figure>
-
-        <div class="info-content">
-          <h1 class="name" title="Soman Khadka">Soman Khadka</h1>
-
-          <p class="title">Personal Website</p>
-        </div>
-
-        <button class="info_more-btn" data-sidebar-btn>
-          <span>Show Contacts</span>
-
-          <ion-icon name="chevron-down"></ion-icon>
-        </button>
-
+<main>
+  <aside class="sidebar" data-sidebar>
+    <div class="sidebar-info">
+      <figure class="avatar-box" aria-label="Soman Khadka initials">
+        <div style="width:80px;height:80px;border-radius:20px;background:#353535;display:grid;place-items:center;color:#ffdb70;font-size:30px;font-weight:600;">SK</div>
+      </figure>
+      <div class="info-content">
+        <h1 class="name" title="Soman Khadka">Soman Khadka</h1>
+        <p class="title">Business · Finance · Technology</p>
       </div>
-
-      <div class="sidebar-info_more">
-
-        <div class="separator"></div>
-
-        <ul class="contacts-list">
-
-          <li class="contact-item">
-
-            <div class="icon-box">
-              <ion-icon name="mail-outline"></ion-icon>
-            </div>
-
-            <div class="contact-info">
-              <p class="contact-title">Email</p>
-
-              <a href="mailto:YOUR_EMAIL@example.com" class="contact-link">khadkasoman4@gmail.com</a>
-            </div>
-
-          </li>
-
-          <li class="contact-item">
-
-            <div class="icon-box">
-              <ion-icon name="phone-portrait-outline"></ion-icon>
-            </div>
-
-            <div class="contact-info">
-              <p class="contact-title">Phone</p>
-
-              <a href="tel:+12133522795" class="contact-link">+977 9861620333</a>
-            </div>
-
-          </li>
-
-          <li class="contact-item">
-
-            <div class="icon-box">
-              <ion-icon name="calendar-outline"></ion-icon>
-            </div>
-
-            <div class="contact-info">
-              <p class="contact-title">Birthday</p>
-
-              <time datetime="1982-06-23">Nov 10</time>
-            </div>
-
-          </li>
-
-          <li class="contact-item">
-
-            <div class="icon-box">
-              <ion-icon name="location-outline"></ion-icon>
-            </div>
-
-            <div class="contact-info">
-              <p class="contact-title">Location</p>
-
-              <address>Nepal</address>
-            </div>
-
-          </li>
-
-        </ul>
-
-        <div class="separator"></div>
-
-        <ul class="social-list">
-
-          <li class="social-item">
-            <a href="#" class="social-link">
-              <ion-icon name="logo-facebook"></ion-icon>
-            </a>
-          </li>
-
-          <li class="social-item">
-            <a href="#" class="social-link">
-              <ion-icon name="logo-twitter"></ion-icon>
-            </a>
-          </li>
-
-          <li class="social-item">
-            <a href="#" class="social-link">
-              <ion-icon name="logo-instagram"></ion-icon>
-            </a>
-          </li>
-
-        </ul>
-
-      </div>
-
-    </aside>
-
-
-
-
-
-    <!--
-      - #main-content
-    -->
-
-    <div class="main-content">
-
-      <!--
-        - #NAVBAR
-      -->
-
-      <nav class="navbar">
-
-        <ul class="navbar-list">
-
-          <li class="navbar-item">
-            <button class="navbar-link  active" data-nav-link>About</button>
-          </li>
-
-          <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Resume</button>
-          </li>
-
-          <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Portfolio</button>
-          </li>
-
-          <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Blog</button>
-          </li>
-
-          <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Contact</button>
-          </li>
-
-        </ul>
-
-      </nav>
-
-
-
-
-
-      <!--
-        - #ABOUT
-      -->
-
-      <article class="about  active" data-page="about">
-
-        <header>
-          <h2 class="h2 article-title">About me</h2>
-        </header>
-
-        <section class="about-text">
-          <p>
-            Hello, I’m Soman Khadka from Nepal. Welcome to my personal Webste. This website is where I share my interests, learning journey, and projects.
-          </p>
-
-          <p>
-            I enjoy exploring technology, learning new skills, and building useful things for the web. I’ll keep adding my work and updates here.
-          </p>
-        </section>
-
-
-        <!--
-          - service
-        -->
-
-        <section class="service">
-
-          <h3 class="h3 service-title">What i'm doing</h3>
-
-          <ul class="service-list">
-
-            <li class="service-item">
-
-              <div class="service-icon-box">
-                <img src="https://raw.githubusercontent.com/codewithsadee/vcard-personal-portfolio/master/assets/images/icon-design.svg
-                " alt="design icon" width="40">
-              </div>
-
-              <div class="service-content-box">
-                <h4 class="h4 service-item-title">Web design</h4>
-
-                <p class="service-item-text">
-                  The most modern and high-quality design made at a professional level.
-                </p>
-              </div>
-
-            </li>
-
-            <li class="service-item">
-
-              <div class="service-icon-box">
-                <img src="https://raw.githubusercontent.com/codewithsadee/vcard-personal-portfolio/master/assets/images/icon-dev.svg" alt="Web development icon" width="40">
-              </div>
-
-              <div class="service-content-box">
-                <h4 class="h4 service-item-title">Web development</h4>
-
-                <p class="service-item-text">
-                  High-quality development of sites at the professional level.
-                </p>
-              </div>
-
-            </li>
-
-            <li class="service-item">
-
-              <div class="service-icon-box">
-                <img src="https://raw.githubusercontent.com/codewithsadee/vcard-personal-portfolio/master/assets/images/icon-app.svg" alt="mobile app icon" width="40">
-              </div>
-
-              <div class="service-content-box">
-                <h4 class="h4 service-item-title">Mobile apps</h4>
-
-                <p class="service-item-text">
-                  Professional development of applications for iOS and Android.
-                </p>
-              </div>
-
-            </li>
-
-            <li class="service-item">
-
-              <div class="service-icon-box">
-                <img src="https://raw.githubusercontent.com/codewithsadee/vcard-personal-portfolio/master/assets/images/icon-photo.svg" alt="camera icon" width="40">
-              </div>
-
-              <div class="service-content-box">
-                <h4 class="h4 service-item-title">Photography</h4>
-
-                <p class="service-item-text">
-                  I make high-quality photos of any category at a professional level.
-                </p>
-              </div>
-
-            </li>
-
-          </ul>
-
-        </section>
-
-      <!--
-        - #RESUME
-      -->
-
-      <article class="resume" data-page="resume">
-
-        <header>
-          <h2 class="h2 article-title">Resume</h2>
-        </header>
-
-        <section class="timeline">
-
-          <div class="title-wrapper">
-            <div class="icon-box">
-              <ion-icon name="book-outline"></ion-icon>
-            </div>
-
-            <h3 class="h3">Education</h3>
-          </div>
-
-          <ol class="timeline-list">
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">Education details</h4>
-
-              <span>Add your dates</span>
-
-              <p class="timeline-text">
-                Add a short description of your learning and experience here.
-              </p>
-
-            </li>
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">Learning and courses</h4>
-
-              <span>Add your dates</span>
-
-              <p class="timeline-text">
-                Ratione voluptatem sequi nesciunt, facere quisquams facere menda ossimus, omnis voluptas assumenda est
-                omnis..
-              </p>
-
-            </li>
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">Academic background</h4>
-
-              <span>Add your dates</span>
-
-              <p class="timeline-text">
-                Duis aute irure dolor in reprehenderit in voluptate, quila voluptas mag odit aut fugit, sed consequuntur
-                magni dolores
-                eos.
-              </p>
-
-            </li>
-
-          </ol>
-
-        </section>
-
-        <section class="timeline">
-
-          <div class="title-wrapper">
-            <div class="icon-box">
-              <ion-icon name="book-outline"></ion-icon>
-            </div>
-
-            <h3 class="h3">Experience</h3>
-          </div>
-
-          <ol class="timeline-list">
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">Personal projects</h4>
-
-              <span>Ongoing</span>
-
-              <p class="timeline-text">
-                Describe your projects and practical experience here.
-              </p>
-
-            </li>
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">Independent learning</h4>
-
-              <span>Add your dates</span>
-
-              <p class="timeline-text">
-                Add a short description of your learning and experience here.
-              </p>
-
-            </li>
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">Web development</h4>
-
-              <span>Add your dates</span>
-
-              <p class="timeline-text">
-                Add a short description of your learning and experience here.
-              </p>
-
-            </li>
-
-          </ol>
-
-        </section>
-
-        <section class="skill">
-
-          <h3 class="h3 skills-title">My skills</h3>
-
-          <ul class="skills-list content-card">
-
-            <li class="skills-item">
-
-              <div class="title-wrapper">
-                <h5 class="h5">Web design</h5>
-                <data value="60">Learning</data>
-              </div>
-
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 60%;"></div>
-              </div>
-
-            </li>
-
-            <li class="skills-item">
-
-              <div class="title-wrapper">
-                <h5 class="h5">HTML & CSS</h5>
-                <data value="60">Learning</data>
-              </div>
-
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 60%;"></div>
-              </div>
-
-            </li>
-
-            <li class="skills-item">
-
-              <div class="title-wrapper">
-                <h5 class="h5">JavaScript</h5>
-                <data value="40">Learning</data>
-              </div>
-
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 40%;"></div>
-              </div>
-
-            </li>
-
-            <li class="skills-item">
-
-              <div class="title-wrapper">
-                <h5 class="h5">GitHub</h5>
-                <data value="60">Learning</data>
-              </div>
-
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 60%;"></div>
-              </div>
-
-            </li>
-
-          </ul>
-
-        </section>
-
-      </article>
-
-
-
-
-
-      <!--
-        - #PORTFOLIO
-      -->
-
-      <article class="portfolio" data-page="portfolio">
-
-        <header>
-          <h2 class="h2 article-title">Portfolio</h2>
-        </header>
-
-        <section class="projects">
-
-          <ul class="filter-list">
-
-            <li class="filter-item">
-              <button class="active" data-filter-btn>All</button>
-            </li>
-
-            <li class="filter-item">
-              <button data-filter-btn>Web design</button>
-            </li>
-
-            <li class="filter-item">
-              <button data-filter-btn>Applications</button>
-            </li>
-
-            <li class="filter-item">
-              <button data-filter-btn>Web development</button>
-            </li>
-
-          </ul>
-
-          <div class="filter-select-box">
-
-            <button class="filter-select" data-select>
-
-              <div class="select-value" data-selecct-value>Select category</div>
-
-              <div class="select-icon">
-                <ion-icon name="chevron-down"></ion-icon>
-              </div>
-
-            </button>
-
-            <ul class="select-list">
-
-              <li class="select-item">
-                <button data-select-item>All</button>
-              </li>
-
-              <li class="select-item">
-                <button data-select-item>Web design</button>
-              </li>
-
-              <li class="select-item">
-                <button data-select-item>Applications</button>
-              </li>
-
-              <li class="select-item">
-                <button data-select-item>Web development</button>
-              </li>
-
-            </ul>
-
-          </div>
-
-          <ul class="project-list">
-
-            <li class="project-item  active" data-filter-item data-category="web development">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="https://raw.githubusercontent.com/codewithsadee/vcard-personal-portfolio/master/assets/images/project-1.jpg" alt="finance" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Finance</h3>
-
-                <p class="project-category">Web development</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="web development">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="https://raw.githubusercontent.com/codewithsadee/vcard-personal-portfolio/master/assets/images/project-2.png" alt="orizon" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Orizon</h3>
-
-                <p class="project-category">Web development</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="web design">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="https://raw.githubusercontent.com/codewithsadee/vcard-personal-portfolio/master/assets/images/project-3.jpg" alt="fundo" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Fundo</h3>
-
-                <p class="project-category">Web design</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="applications">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="https://raw.githubusercontent.com/codewithsadee/vcard-personal-portfolio/master/assets/images/project-4.png" alt="brawlhalla" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Brawlhalla</h3>
-
-                <p class="project-category">Applications</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="web design">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="https://raw.githubusercontent.com/codewithsadee/vcard-personal-portfolio/master/assets/images/project-5.png" alt="dsm." loading="lazy">
-                </figure>
-
-                <h3 class="project-title">DSM.</h3>
-
-                <p class="project-category">Web design</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="web design">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="https://raw.githubusercontent.com/codewithsadee/vcard-personal-portfolio/master/assets/images/project-6.png" alt="metaspark" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">MetaSpark</h3>
-
-                <p class="project-category">Web design</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="web development">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="https://raw.githubusercontent.com/codewithsadee/vcard-personal-portfolio/master/assets/images/project-7.png" alt="summary" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Summary</h3>
-
-                <p class="project-category">Web development</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="applications">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="https://raw.githubusercontent.com/codewithsadee/vcard-personal-portfolio/master/assets/images/project-8.jpg" alt="task manager" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Task Manager</h3>
-
-                <p class="project-category">Applications</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="web development">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="https://raw.githubusercontent.com/codewithsadee/vcard-personal-portfolio/master/assets/images/project-9.png" alt="arrival" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Arrival</h3>
-
-                <p class="project-category">Web development</p>
-
-              </a>
-            </li>
-
-          </ul>
-
-        </section>
-
-      </article>
-
-
-
-
-
-      <!--
-        - #BLOG
-      -->
-
-      <article class="blog" data-page="blog">
-
-        <header>
-          <h2 class="h2 article-title">Blog</h2>
-        </header>
-
-        <section class="blog-posts">
-
-          <ul class="blog-posts-list">
-
-            <li class="blog-post-item">
-              <a href="#">
-
-                <figure class="blog-banner-box">
-                  <img src="https://raw.githubusercontent.com/codewithsadee/vcard-personal-portfolio/master/assets/images/blog-1.jpg" alt="Design conferences in 2022" loading="lazy">
-                </figure>
-
-                <div class="blog-content">
-
-                  <div class="blog-meta">
-                    <p class="blog-category">Design</p>
-
-                    <span class="dot"></span>
-
-                    <time datetime="2022-02-23">Fab 23, 2022</time>
-                  </div>
-
-                  <h3 class="h3 blog-item-title">Design conferences in 2022</h3>
-
-                  <p class="blog-text">
-                    Veritatis et quasi architecto beatae vitae dicta sunt, explicabo.
-                  </p>
-
-                </div>
-
-              </a>
-            </li>
-
-            <li class="blog-post-item">
-              <a href="#">
-
-                <figure class="blog-banner-box">
-                  <img src="https://raw.githubusercontent.com/codewithsadee/vcard-personal-portfolio/master/assets/images/blog-2.jpg" alt="Best fonts every designer" loading="lazy">
-                </figure>
-
-                <div class="blog-content">
-
-                  <div class="blog-meta">
-                    <p class="blog-category">Design</p>
-
-                    <span class="dot"></span>
-
-                    <time datetime="2022-02-23">Fab 23, 2022</time>
-                  </div>
-
-                  <h3 class="h3 blog-item-title">Best fonts every designer</h3>
-
-                  <p class="blog-text">
-                    Sed ut perspiciatis, nam libero tempore, cum soluta nobis est eligendi.
-                  </p>
-
-                </div>
-
-              </a>
-            </li>
-
-            <li class="blog-post-item">
-              <a href="#">
-
-                <figure class="blog-banner-box">
-                  <img src="https://raw.githubusercontent.com/codewithsadee/vcard-personal-portfolio/master/assets/images/blog-3.jpg" alt="Design digest #80" loading="lazy">
-                </figure>
-
-                <div class="blog-content">
-
-                  <div class="blog-meta">
-                    <p class="blog-category">Design</p>
-
-                    <span class="dot"></span>
-
-                    <time datetime="2022-02-23">Fab 23, 2022</time>
-                  </div>
-
-                  <h3 class="h3 blog-item-title">Design digest #80</h3>
-
-                  <p class="blog-text">
-                    Excepteur sint occaecat cupidatat no proident, quis nostrum exercitationem ullam corporis suscipit.
-                  </p>
-
-                </div>
-
-              </a>
-            </li>
-
-            <li class="blog-post-item">
-              <a href="#">
-
-                <figure class="blog-banner-box">
-                  <img src="https://raw.githubusercontent.com/codewithsadee/vcard-personal-portfolio/master/assets/images/blog-4.jpg" alt="UI interactions of the week" loading="lazy">
-                </figure>
-
-                <div class="blog-content">
-
-                  <div class="blog-meta">
-                    <p class="blog-category">Design</p>
-
-                    <span class="dot"></span>
-
-                    <time datetime="2022-02-23">Fab 23, 2022</time>
-                  </div>
-
-                  <h3 class="h3 blog-item-title">UI interactions of the week</h3>
-
-                  <p class="blog-text">
-                    Enim ad minim veniam, consectetur adipiscing elit, quis nostrud exercitation ullamco laboris nisi.
-                  </p>
-
-                </div>
-
-              </a>
-            </li>
-
-            <li class="blog-post-item">
-              <a href="#">
-
-                <figure class="blog-banner-box">
-                  <img src="https://raw.githubusercontent.com/codewithsadee/vcard-personal-portfolio/master/assets/images/blog-5.jpg" alt="The forgotten art of spacing" loading="lazy">
-                </figure>
-
-                <div class="blog-content">
-
-                  <div class="blog-meta">
-                    <p class="blog-category">Design</p>
-
-                    <span class="dot"></span>
-
-                    <time datetime="2022-02-23">Fab 23, 2022</time>
-                  </div>
-
-                  <h3 class="h3 blog-item-title">The forgotten art of spacing</h3>
-
-                  <p class="blog-text">
-                    Maxime placeat, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  </p>
-
-                </div>
-
-              </a>
-            </li>
-
-            <li class="blog-post-item">
-              <a href="#">
-
-                <figure class="blog-banner-box">
-                  <img src="https://raw.githubusercontent.com/codewithsadee/vcard-personal-portfolio/master/assets/images/blog-6.jpg" alt="Design digest #79" loading="lazy">
-                </figure>
-
-                <div class="blog-content">
-
-                  <div class="blog-meta">
-                    <p class="blog-category">Design</p>
-
-                    <span class="dot"></span>
-
-                    <time datetime="2022-02-23">Fab 23, 2022</time>
-                  </div>
-
-                  <h3 class="h3 blog-item-title">Design digest #79</h3>
-
-                  <p class="blog-text">
-                    Optio cumque nihil impedit uo minus quod maxime placeat, velit esse cillum.
-                  </p>
-
-                </div>
-
-              </a>
-            </li>
-
-          </ul>
-
-        </section>
-
-      </article>
-
-
-
-
-
-      <!--
-        - #CONTACT
-      -->
-
-      <article class="contact" data-page="contact">
-
-        <header>
-          <h2 class="h2 article-title">Contact</h2>
-        </header>
-
-        <section class="mapbox" data-mapbox>
-          <figure>
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d199666.5651251294!2d-121.58334177520186!3d38.56165006739519!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x809ac672b28397f9%3A0x921f6aaa74197fdb!2sSacramento%2C%20CA%2C%20USA!5e0!3m2!1sen!2sbd!4v1647608789441!5m2!1sen!2sbd"
-              width="400" height="300" loading="lazy"></iframe>
-          </figure>
-        </section>
-
-        <section class="contact-form">
-
-          <h3 class="h3 form-title">Contact Form</h3>
-
-          <form action="#" class="form" data-form>
-
-            <div class="input-wrapper">
-              <input type="text" name="fullname" class="form-input" placeholder="Full name" required data-form-input>
-
-              <input type="email" name="email" class="form-input" placeholder="Email address" required data-form-input>
-            </div>
-
-            <textarea name="message" class="form-input" placeholder="Your Message" required data-form-input></textarea>
-
-            <button class="form-btn" type="submit" disabled data-form-btn>
-              <ion-icon name="paper-plane"></ion-icon>
-              <span>Send Message</span>
-            </button>
-
-          </form>
-
-        </section>
-
-      </article>
-
+      <button class="info_more-btn" data-sidebar-btn type="button">
+        <span>Show Contacts</span><ion-icon name="chevron-down"></ion-icon>
+      </button>
     </div>
-
-  </main>
-
-
-
-
-
-
-  <!--
-    - custom js link
-  -->
-  <script src="./assets/js/script.js"></script>
-
-  <!--
-    - ionicon link
-  -->
-  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-
+    <div class="sidebar-info_more">
+      <div class="separator"></div>
+      <ul class="contacts-list">
+        <li class="contact-item"><div class="icon-box"><ion-icon name="mail-outline"></ion-icon></div><div class="contact-info"><p class="contact-title">Email</p><a href="mailto:khadkasoman3@gmail.com" class="contact-link">khadkasoman3@gmail.com</a></div></li>
+        <li class="contact-item"><div class="icon-box"><ion-icon name="phone-portrait-outline"></ion-icon></div><div class="contact-info"><p class="contact-title">Phone</p><a href="tel:+9779861620333" class="contact-link">+977 9861620333</a></div></li>
+        <li class="contact-item"><div class="icon-box"><ion-icon name="location-outline"></ion-icon></div><div class="contact-info"><p class="contact-title">Location</p><address>Kathmandu, Nepal</address></div></li>
+        <li class="contact-item"><div class="icon-box"><ion-icon name="logo-linkedin"></ion-icon></div><div class="contact-info"><p class="contact-title">LinkedIn</p><a href="https://linkedin.com/in/soman-khadka-7a6581367" target="_blank" rel="noopener noreferrer" class="contact-link">View Profile</a></div></li>
+      </ul>
+      <div class="separator"></div>
+      <ul class="social-list">
+        <li class="social-item"><a href="https://linkedin.com/in/soman-khadka-7a6581367" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn"><ion-icon name="logo-linkedin"></ion-icon></a></li>
+        <li class="social-item"><a href="mailto:khadkasoman3@gmail.com" class="social-link" aria-label="Email"><ion-icon name="mail-outline"></ion-icon></a></li>
+      </ul>
+    </div>
+  </aside>
+  <div class="main-content">
+    <nav class="navbar" aria-label="Main navigation">
+      <ul class="navbar-list">
+        <li class="navbar-item"><button class="navbar-link active" data-nav-link type="button">About</button></li>
+        <li class="navbar-item"><button class="navbar-link" data-nav-link type="button">Resume</button></li>
+        <li class="navbar-item"><button class="navbar-link" data-nav-link type="button">Contact</button></li>
+      </ul>
+    </nav>
+    <article class="about active" data-page="about">
+      <header><h2 class="h2 article-title">About Me</h2></header>
+      <section class="about-text">
+        <p>I’m Soman Khadka, a business and finance professional based in Kathmandu, Nepal. I hold an International Master of Business Administration (IMBA) awarded by the University of Wolverhampton, UK, and a Bachelor of Computer Science (Hons) in Information Technology.</p>
+        <p>My experience brings together business operations, bookkeeping, accounting support, banking operations and customer assistance, alongside an academic background in information technology. I am a Co-Founder of Shree Ganesh Chimni Itta Udhyog and previously worked as a Customer Assistant Trainee in the Loan Department at Nepal SBI Bank.</p>
+        <p>I enjoy combining financial knowledge, technology skills, analytical thinking and clear communication to support practical business work and solve problems.</p>
+      </section>
+      <section class="service">
+        <h3 class="h3 service-title">Areas of Experience</h3>
+        <ul class="service-list">
+          <li class="service-item"><div class="service-icon-box"><img src="https://raw.githubusercontent.com/codewithsadee/vcard-personal-portfolio/master/assets/images/icon-design.svg" alt="" width="40"></div><div class="service-content-box"><h4 class="h4 service-item-title">Business Operations</h4><p class="service-item-text">Business coordination, planning and day-to-day operational support.</p></div></li>
+          <li class="service-item"><div class="service-icon-box"><img src="https://raw.githubusercontent.com/codewithsadee/vcard-personal-portfolio/master/assets/images/icon-dev.svg" alt="" width="40"></div><div class="service-content-box"><h4 class="h4 service-item-title">Finance & Accounting</h4><p class="service-item-text">Bookkeeping, financial records, invoices and accounting support.</p></div></li>
+          <li class="service-item"><div class="service-icon-box"><img src="https://raw.githubusercontent.com/codewithsadee/vcard-personal-portfolio/master/assets/images/icon-app.svg" alt="" width="40"></div><div class="service-content-box"><h4 class="h4 service-item-title">Banking Operations</h4><p class="service-item-text">Exposure to loan-department processes and customer assistance.</p></div></li>
+          <li class="service-item"><div class="service-icon-box"><img src="https://raw.githubusercontent.com/codewithsadee/vcard-personal-portfolio/master/assets/images/icon-photo.svg" alt="" width="40"></div><div class="service-content-box"><h4 class="h4 service-item-title">Information Technology</h4><p class="service-item-text">Computer science background and practical front-end development exposure.</p></div></li>
+        </ul>
+      </section>
+    </article>
+    <article class="resume" data-page="resume">
+      <header><h2 class="h2 article-title">Resume</h2></header>
+      <section class="timeline">
+        <div class="title-wrapper"><div class="icon-box"><ion-icon name="book-outline"></ion-icon></div><h3 class="h3">Education</h3></div>
+        <ol class="timeline-list">
+          <li class="timeline-item"><h4 class="h4 timeline-item-title">International Master of Business Administration (IMBA)</h4><span>2023–2025</span><p class="timeline-text">Herald College, Kathmandu, Nepal · University of Wolverhampton, UK<br>Result: Pass. Masters Research Project (7MG001), 60 credits — P50.</p></li>
+          <li class="timeline-item"><h4 class="h4 timeline-item-title">Bachelor of Computer Science (Hons) — Information Technology</h4><span>2019–2022</span><p class="timeline-text">Islington College · London Metropolitan University<br>Result: 63.61%.</p></li>
+          <li class="timeline-item"><h4 class="h4 timeline-item-title">+2 Management</h4><span>2017–2019</span><p class="timeline-text">The Times Secondary College · CGPA: 2.58.</p></li>
+          <li class="timeline-item"><h4 class="h4 timeline-item-title">Secondary Education</h4><span>2015–2017</span><p class="timeline-text">Himalayan Academy · CGPA: 3.20.</p></li>
+        </ol>
+      </section>
+      <section class="timeline">
+        <div class="title-wrapper"><div class="icon-box"><ion-icon name="briefcase-outline"></ion-icon></div><h3 class="h3">Professional Experience</h3></div>
+        <ol class="timeline-list">
+          <li class="timeline-item"><h4 class="h4 timeline-item-title">Co-Founder — Shree Ganesh Chimni Itta Udhyog</h4><span>2024–Present</span><p class="timeline-text">Co-founded a brick manufacturing business. Contribute to business operations, planning and day-to-day coordination.</p></li>
+          <li class="timeline-item"><h4 class="h4 timeline-item-title">Customer Assistant Trainee — Loan Department, Nepal SBI Bank</h4><span>20 October 2025–20 April 2026</span><p class="timeline-text">Gained exposure to banking operations and loan-department processes. Assisted customers and supported routine departmental activities within assigned responsibilities.</p></li>
+          <li class="timeline-item"><h4 class="h4 timeline-item-title">Bookkeeping and Accounts — L & J Traders</h4><span>March 2020–February 2023</span><p class="timeline-text">Worked with bookkeeping and accounting records; supported the organisation of invoices, payments and financial information.</p></li>
+          <li class="timeline-item"><h4 class="h4 timeline-item-title">Front-End Developer Intern — Connectify Nepal</h4><span>2022</span><p class="timeline-text">Gained practical exposure to front-end development work.</p></li>
+        </ol>
+      </section>
+      <section class="timeline">
+        <div class="title-wrapper"><div class="icon-box"><ion-icon name="ribbon-outline"></ion-icon></div><h3 class="h3">Training & Certification</h3></div>
+        <ol class="timeline-list"><li class="timeline-item"><h4 class="h4 timeline-item-title">Financial Markets Sales Job Simulation</h4><span>Forage · July 2025</span><p class="timeline-text">Completed a financial-markets-related job simulation.</p></li></ol>
+      </section>
+      <section class="skill">
+        <h3 class="h3 skills-title">Core Skills</h3>
+        <ul class="skills-list content-card">
+          <li class="skills-item"><div class="title-wrapper"><h5 class="h5">Bookkeeping & Accounting Support</h5></div><div class="skill-progress-bg"><div class="skill-progress-fill" style="width:85%;"></div></div></li>
+          <li class="skills-item"><div class="title-wrapper"><h5 class="h5">Banking Operations & Loan-Process Support</h5></div><div class="skill-progress-bg"><div class="skill-progress-fill" style="width:80%;"></div></div></li>
+          <li class="skills-item"><div class="title-wrapper"><h5 class="h5">Business Operations & Coordination</h5></div><div class="skill-progress-bg"><div class="skill-progress-fill" style="width:85%;"></div></div></li>
+          <li class="skills-item"><div class="title-wrapper"><h5 class="h5">Data Collection, Data Entry & Microsoft Office</h5></div><div class="skill-progress-bg"><div class="skill-progress-fill" style="width:80%;"></div></div></li>
+          <li class="skills-item"><div class="title-wrapper"><h5 class="h5">Computer & IT Skills</h5></div><div class="skill-progress-bg"><div class="skill-progress-fill" style="width:80%;"></div></div></li>
+          <li class="skills-item"><div class="title-wrapper"><h5 class="h5">Problem-Solving, Organisation & Communication</h5></div><div class="skill-progress-bg"><div class="skill-progress-fill" style="width:85%;"></div></div></li>
+        </ul>
+      </section>
+      <section class="about-text"><h3 class="h3">Languages</h3><p>English — Reading: Good; Writing: Good; Speaking: Average.</p><p>References available upon request.</p></section>
+    </article>
+    <article class="contact" data-page="contact">
+      <header><h2 class="h2 article-title">Contact</h2></header>
+      <section class="mapbox" data-mapbox><figure><iframe title="Map of Kathmandu, Nepal" src="https://www.google.com/maps?q=Kathmandu,Nepal&output=embed" width="400" height="300" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></figure></section>
+      <section class="contact-form">
+        <h3 class="h3 form-title">Get In Touch</h3>
+        <p class="form-text" style="color:#d6d6d6;margin-bottom:18px;">Have a question or opportunity? Send me a message.</p>
+        <form class="form" data-form>
+          <div class="input-wrapper">
+            <input type="text" name="fullname" class="form-input" placeholder="Full name" required data-form-input>
+            <input type="email" name="email" class="form-input" placeholder="Email address" required data-form-input>
+          </div>
+          <textarea name="message" class="form-input" placeholder="Your Message" required data-form-input></textarea>
+          <button class="form-btn" type="submit" data-form-btn disabled><ion-icon name="paper-plane"></ion-icon><span>Send Message</span></button>
+        </form>
+      </section>
+    </article>
+  </div>
+</main>
+<script src="./assets/js/script.js"></script>
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </body>
-
 </html>
