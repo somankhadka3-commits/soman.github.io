@@ -1,206 +1,1201 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="The personal portfolio of Soman Khadka — projects, skills, and ways to get in touch.">
-  <meta name="theme-color" content="#0b1020">
   <title>Soman Khadka | Personal Portfolio</title>
-  <style>
-    :root {
-      --bg: #0b1020; --panel: #121a2e; --panel2: #17223a;
-      --text: #f4f7ff; --muted: #a9b5ca; --line: rgba(255,255,255,.1);
-      --accent: #79e0c3; --accent2: #8ba8ff; --max: 1120px;
-    }
-    * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
-    body {
-      margin: 0; background: radial-gradient(circle at 80% 0%, #1c2d4b 0, transparent 34%), var(--bg);
-      color: var(--text); font: 16px/1.65 Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-    }
-    a { color: inherit; text-decoration: none; }
-    a:focus-visible, button:focus-visible { outline: 3px solid var(--accent); outline-offset: 4px; }
-    .wrap { width: min(var(--max), calc(100% - 40px)); margin: auto; }
-    header { position: sticky; top: 0; z-index: 10; background: rgba(11,16,32,.82); backdrop-filter: blur(16px); border-bottom: 1px solid var(--line); }
-    nav { min-height: 76px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
-    .brand { font-weight: 800; letter-spacing: -.04em; font-size: 1.12rem; }
-    .brand span { color: var(--accent); }
-    .navlinks { display: flex; align-items: center; gap: 25px; color: var(--muted); font-size: .94rem; }
-    .navlinks a:hover { color: var(--text); }
-    .menu { display: none; background: transparent; color: var(--text); border: 1px solid var(--line); border-radius: 10px; padding: 8px 12px; }
-    .hero { min-height: 690px; display: grid; grid-template-columns: 1.35fr .65fr; align-items: center; gap: 50px; padding: 95px 0 110px; }
-    .eyebrow { color: var(--accent); text-transform: uppercase; letter-spacing: .16em; font-size: .76rem; font-weight: 800; }
-    h1 { font-size: clamp(3.1rem, 8vw, 6.4rem); line-height: .99; letter-spacing: -.075em; margin: 20px 0 25px; }
-    h1 em { color: var(--accent); font-style: normal; }
-    .lead { color: var(--muted); max-width: 620px; font-size: clamp(1.05rem, 2vw, 1.22rem); }
-    .actions { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 34px; }
-    .btn { display: inline-flex; align-items: center; justify-content: center; gap: 9px; border-radius: 999px; padding: 13px 21px; font-weight: 750; border: 1px solid var(--line); transition: transform .2s, background .2s; }
-    .btn:hover { transform: translateY(-2px); }
-    .primary { background: var(--accent); color: #07151a; border-color: var(--accent); }
-    .secondary { color: var(--text); background: rgba(255,255,255,.035); }
-    .profile-card { position: relative; padding: 28px; border: 1px solid var(--line); border-radius: 28px; background: linear-gradient(145deg, rgba(121,224,195,.12), rgba(139,168,255,.08)); box-shadow: 0 25px 80px rgba(0,0,0,.24); }
-    .avatar { width: 100%; aspect-ratio: 1; display: grid; place-items: center; border-radius: 22px; background: linear-gradient(135deg, #243c56, #1b2944 55%, #284d53); font-size: clamp(4rem, 9vw, 7rem); font-weight: 850; letter-spacing: -.08em; color: var(--accent); }
-    .card-note { margin: 18px 0 0; color: var(--muted); font-size: .9rem; }
-    section { padding: 88px 0; border-top: 1px solid var(--line); }
-    .section-head { max-width: 680px; margin-bottom: 38px; }
-    .section-head h2 { margin: 9px 0 10px; font-size: clamp(2rem, 4vw, 3.2rem); letter-spacing: -.055em; line-height: 1.1; }
-    .section-head p { color: var(--muted); margin: 0; }
-    .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; }
-    .panel { background: rgba(18,26,46,.8); border: 1px solid var(--line); border-radius: 22px; padding: 27px; }
-    .panel h3 { margin: 0 0 10px; font-size: 1.12rem; }
-    .panel p { color: var(--muted); margin: 0; }
-    .skills { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 20px; }
-    .tag { border: 1px solid var(--line); color: #dce6f7; background: rgba(255,255,255,.035); border-radius: 999px; padding: 7px 12px; font-size: .88rem; }
-    .projects { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
-    .project { min-height: 245px; display: flex; flex-direction: column; justify-content: space-between; background: linear-gradient(155deg, var(--panel2), var(--panel)); border: 1px solid var(--line); border-radius: 22px; padding: 25px; }
-    .project .number { color: var(--accent); font-size: .8rem; font-weight: 800; letter-spacing: .12em; }
-    .project h3 { margin: 26px 0 8px; font-size: 1.25rem; }
-    .project p { margin: 0; color: var(--muted); font-size: .94rem; }
-    .project a { margin-top: 22px; color: var(--accent); font-weight: 750; font-size: .92rem; }
-    .contact { display: grid; grid-template-columns: 1.1fr .9fr; gap: 30px; align-items: center; }
-    .contact-box { background: linear-gradient(135deg, rgba(121,224,195,.12), rgba(139,168,255,.12)); border: 1px solid var(--line); border-radius: 24px; padding: 30px; }
-    .contact-box p { color: var(--muted); }
-    footer { border-top: 1px solid var(--line); padding: 27px 0; color: var(--muted); font-size: .88rem; }
-    footer .wrap { display: flex; justify-content: space-between; gap: 15px; flex-wrap: wrap; }
-    @media (max-width: 800px) {
-      .hero { min-height: auto; grid-template-columns: 1fr; padding: 75px 0 85px; gap: 40px; }
-      .profile-card { max-width: 380px; }
-      .avatar { aspect-ratio: 1.2; }
-      .projects { grid-template-columns: 1fr 1fr; }
-      .contact { grid-template-columns: 1fr; }
-    }
-    @media (max-width: 600px) {
-      .wrap { width: min(100% - 30px, var(--max)); }
-      nav { min-height: 68px; }
-      .menu { display: block; }
-      .navlinks { display: none; position: absolute; top: 68px; left: 0; right: 0; padding: 18px 22px 22px; background: #10182a; border-bottom: 1px solid var(--line); flex-direction: column; align-items: flex-start; }
-      .navlinks.open { display: flex; }
-      .hero { padding: 65px 0 75px; }
-      section { padding: 68px 0; }
-      .about-grid, .projects { grid-template-columns: 1fr; }
-      .profile-card { padding: 18px; }
-      h1 { font-size: clamp(3rem, 17vw, 5rem); }
-    }
-  </style>
+
+  <!--
+    - favicon
+  -->
+  <link rel="shortcut icon" href="https://raw.githubusercontent.com/codewithsadee/vcard-personal-portfolio/master/assets/images/logo.ico" type="image/x-icon">
+
+  <!--
+    - custom css link
+  -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+
+  <!--
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
+
 <body>
-  <header>
-    <nav class="wrap" aria-label="Main navigation">
-      <a class="brand" href="#home">SOMAN<span>.</span></a>
-      <button class="menu" id="menuButton" aria-expanded="false" aria-controls="navLinks">Menu</button>
-      <div class="navlinks" id="navLinks">
-        <a href="#about">About</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#contact">Contact</a>
-      </div>
-    </nav>
-  </header>
+
+  <!--
+    - #MAIN
+  -->
 
   <main>
-    <div class="wrap">
-      <section class="hero" id="home" style="border:0">
-        <div>
-          <div class="eyebrow">Hello, welcome to my corner of the web</div>
-          <h1>I'm Soman<br><em>Khadka.</em></h1>
-          <p class="lead">I’m building my path in the digital world. This is where I share what I do, what I’m learning, and the projects I’m proud to work on.</p>
-          <div class="actions">
-            <a class="btn primary" href="#projects">Explore my work <span aria-hidden="true">↗</span></a>
-            <a class="btn secondary" href="#contact">Get in touch</a>
-          </div>
-        </div>
-        <aside class="profile-card" aria-label="Profile card">
-          <div class="avatar" aria-label="Initials SK">SK</div>
-          <p class="card-note">Soman Khadka · Personal Portfolio · Nepal</p>
-        </aside>
-      </section>
 
-      <section id="about">
-        <div class="section-head">
-          <div class="eyebrow">A little about me</div>
-          <h2>Curious mind.<br>Practical ideas.</h2>
-          <p>Use this section to introduce yourself in a few sentences. Tell visitors what you do, what motivates you, and the kind of opportunities you’re interested in.</p>
-        </div>
-        <div class="about-grid">
-          <article class="panel">
-            <h3>My story</h3>
-            <p>I’m Soman Khadka, based in Nepal. I enjoy learning, exploring new ideas, and turning useful ideas into real projects. Replace this text with your own background and goals.</p>
-          </article>
-          <article class="panel">
-            <h3>What I’m focused on</h3>
-            <p>Add your current interests here — for example web development, technology, design, business, education, or creative work. Keep it authentic and specific to you.</p>
-          </article>
-        </div>
-      </section>
+    <!--
+      - #SIDEBAR
+    -->
 
-      <section id="skills">
-        <div class="section-head">
-          <div class="eyebrow">What I work with</div>
-          <h2>Skills & interests</h2>
-          <p>These are starter examples. Edit the labels to match your actual skills and interests.</p>
-        </div>
-        <div class="panel">
-          <div class="skills">
-            <span class="tag">Learning & research</span><span class="tag">Problem solving</span>
-            <span class="tag">Communication</span><span class="tag">Digital tools</span>
-            <span class="tag">Creative thinking</span><span class="tag">Web technology</span>
-          </div>
-        </div>
-      </section>
+    <aside class="sidebar" data-sidebar>
 
-      <section id="projects">
-        <div class="section-head">
-          <div class="eyebrow">Selected work</div>
-          <h2>Projects & highlights</h2>
-          <p>Showcase your work here. Replace these sample cards with real projects, achievements, or case studies when you’re ready.</p>
-        </div>
-        <div class="projects">
-          <article class="project">
-            <div><div class="number">01 / PROJECT</div><h3>My first project</h3><p>Write a short description of something you have built, created, or contributed to.</p></div>
-            <a href="#contact">Ask me about it ↗</a>
-          </article>
-          <article class="project">
-            <div><div class="number">02 / LEARNING</div><h3>A skill I’m developing</h3><p>Describe a course, personal challenge, or skill you are actively improving.</p></div>
-            <a href="#contact">Connect with me ↗</a>
-          </article>
-          <article class="project">
-            <div><div class="number">03 / GOAL</div><h3>What’s next</h3><p>Share an idea or goal you’re excited to explore in the coming months.</p></div>
-            <a href="#contact">Let’s talk ↗</a>
-          </article>
-        </div>
-      </section>
+      <div class="sidebar-info">
 
-      <section id="contact">
-        <div class="contact">
-          <div>
-            <div class="eyebrow">Have a question or an idea?</div>
-            <h2 style="font-size:clamp(2.5rem,5vw,4.2rem);line-height:1.05;letter-spacing:-.06em;margin:12px 0">Let’s make<br>something useful.</h2>
-            <p style="color:var(--muted)">I’d be happy to hear from you. Add your real email and social profile links below before publishing.</p>
-          </div>
-          <div class="contact-box">
-            <h3>Contact Soman</h3>
-            <p>Email is the easiest way to reach me.</p>
-            <!-- Replace the placeholder email address with your real email address. -->
-            <a class="btn primary" href="mailto:YOUR-EMAIL@example.com">Send an email ↗</a>
-            <p style="font-size:.85rem;margin-bottom:0">Also add your LinkedIn, GitHub, or other profile links when ready.</p>
-          </div>
+        <figure class="avatar-box">
+          <img src="https://raw.githubusercontent.com/codewithsadee/vcard-personal-portfolio/master/assets/images/my-avatar.png" alt="Soman Khadka" width="80">
+        </figure>
+
+        <div class="info-content">
+          <h1 class="name" title="Soman Khadka">Soman Khadka</h1>
+
+          <p class="title">Personal Portfolio</p>
         </div>
-      </section>
+
+        <button class="info_more-btn" data-sidebar-btn>
+          <span>Show Contacts</span>
+
+          <ion-icon name="chevron-down"></ion-icon>
+        </button>
+
+      </div>
+
+      <div class="sidebar-info_more">
+
+        <div class="separator"></div>
+
+        <ul class="contacts-list">
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="mail-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Email</p>
+
+              <a href="mailto:YOUR_EMAIL@example.com" class="contact-link">YOUR_EMAIL@example.com</a>
+            </div>
+
+          </li>
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="phone-portrait-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Phone</p>
+
+              <a href="" class="contact-link">Add your phone number</a>
+            </div>
+
+          </li>
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="calendar-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Birthday</p>
+
+              <time datetime=""></time>
+            </div>
+
+          </li>
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="location-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Location</p>
+
+              <address>Nepal</address>
+            </div>
+
+          </li>
+
+        </ul>
+
+        <div class="separator"></div>
+
+        <ul class="social-list">
+
+          <li class="social-item">
+            <a href="#" class="social-link">
+              <ion-icon name="logo-facebook"></ion-icon>
+            </a>
+          </li>
+
+          <li class="social-item">
+            <a href="#" class="social-link">
+              <ion-icon name="logo-twitter"></ion-icon>
+            </a>
+          </li>
+
+          <li class="social-item">
+            <a href="#" class="social-link">
+              <ion-icon name="logo-instagram"></ion-icon>
+            </a>
+          </li>
+
+        </ul>
+
+      </div>
+
+    </aside>
+
+
+
+
+
+    <!--
+      - #main-content
+    -->
+
+    <div class="main-content">
+
+      <!--
+        - #NAVBAR
+      -->
+
+      <nav class="navbar">
+
+        <ul class="navbar-list">
+
+          <li class="navbar-item">
+            <button class="navbar-link  active" data-nav-link>About</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Resume</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Portfolio</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Blog</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Contact</button>
+          </li>
+
+        </ul>
+
+      </nav>
+
+
+
+
+
+      <!--
+        - #ABOUT
+      -->
+
+      <article class="about  active" data-page="about">
+
+        <header>
+          <h2 class="h2 article-title">About me</h2>
+        </header>
+
+        <section class="about-text">
+          <p>
+            Hello! I'm Soman Khadka from Nepal. Welcome to my personal portfolio.
+            I enjoy
+            turning complex problems into simple, beautiful and intuitive designs.
+          </p>
+
+          <p>
+            My job is to build your website so that it is functional and user-friendly but at the same time attractive.
+            Moreover, I
+            add personal touch to your product and make sure that is eye-catching and easy to use. My aim is to bring
+            across your
+            message and identity in the most creative way. I created web design for many famous brand companies.
+          </p>
+        </section>
+
+
+        <!--
+          - service
+        -->
+
+        <section class="service">
+
+          <h3 class="h3 service-title">My interests</h3>
+
+          <ul class="service-list">
+
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="https://raw.githubusercontent.com/codewithsadee/vcard-personal-portfolio/master/assets/images/icon-design.svg
+                " alt="design icon" width="40">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Web design</h4>
+
+                <p class="service-item-text">
+                  The most modern and high-quality design made at a professional level.
+                </p>
+              </div>
+
+            </li>
+
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="https://raw.githubusercontent.com/codewithsadee/vcard-personal-portfolio/master/assets/images/icon-dev.svg" alt="Web development icon" width="40">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Web development</h4>
+
+                <p class="service-item-text">
+                  High-quality development of sites at the professional level.
+                </p>
+              </div>
+
+            </li>
+
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="https://raw.githubusercontent.com/codewithsadee/vcard-personal-portfolio/master/assets/images/icon-app.svg" alt="mobile app icon" width="40">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Mobile apps</h4>
+
+                <p class="service-item-text">
+                  Professional development of applications for iOS and Android.
+                </p>
+              </div>
+
+            </li>
+
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="https://raw.githubusercontent.com/codewithsadee/vcard-personal-portfolio/master/assets/images/icon-photo.svg" alt="camera icon" width="40">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Photography</h4>
+
+                <p class="service-item-text">
+                  I make high-quality photos of any category at a professional level.
+                </p>
+              </div>
+
+            </li>
+
+          </ul>
+
+        </section>
+
+
+        <!--
+          - testimonials
+        -->
+
+        <section class="testimonials">
+
+          <h3 class="h3 testimonials-title">Highlights</h3>
+
+          <ul class="testimonials-list has-scrollbar">
+
+            <li class="testimonials-item">
+              <div class="content-card" data-testimonials-item>
+
+                <figure class="testimonials-avatar-box">
+                  <img src="https://raw.githubusercontent.com/codewithsadee/vcard-personal-portfolio/master/assets/images/avatar-1.png" alt="Daniel lewis" width="60" data-testimonials-avatar>
+                </figure>
+
+                <h4 class="h4 testimonials-item-title" data-testimonials-title>Daniel lewis</h4>
+
+                <div class="testimonials-text" data-testimonials-text>
+                  <p>
+                    Soman was hired to create a corporate identity. We were very pleased with the work done. She has a
+                    lot of experience
+                    and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt
+                    consectetur adipiscing
+                    elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.
+                  </p>
+                </div>
+
+              </div>
+            </li>
+
+            <li class="testimonials-item">
+              <div class="content-card" data-testimonials-item>
+
+                <figure class="testimonials-avatar-box">
+                  <img src="https://raw.githubusercontent.com/codewithsadee/vcard-personal-portfolio/master/assets/images/avatar-2.png" alt="Jessica miller" width="60" data-testimonials-avatar>
+                </figure>
+
+                <h4 class="h4 testimonials-item-title" data-testimonials-title>Jessica miller</h4>
+
+                <div class="testimonials-text" data-testimonials-text>
+                  <p>
+                    Soman was hired to create a corporate identity. We were very pleased with the work done. She has a
+                    lot of experience
+                    and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt
+                    consectetur adipiscing
+                    elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.
+                  </p>
+                </div>
+
+              </div>
+            </li>
+
+            <li class="testimonials-item">
+              <div class="content-card" data-testimonials-item>
+
+                <figure class="testimonials-avatar-box">
+                  <img src="https://raw.githubusercontent.com/codewithsadee/vcard-personal-portfolio/master/assets/images/avatar-3.png" alt="Emily evans" width="60" data-testimonials-avatar>
+                </figure>
+
+                <h4 class="h4 testimonials-item-title" data-testimonials-title>Emily evans</h4>
+
+                <div class="testimonials-text" data-testimonials-text>
+                  <p>
+                    Soman was hired to create a corporate identity. We were very pleased with the work done. She has a
+                    lot of experience
+                    and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt
+                    consectetur adipiscing
+                    elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.
+                  </p>
+                </div>
+
+              </div>
+            </li>
+
+            <li class="testimonials-item">
+              <div class="content-card" data-testimonials-item>
+
+                <figure class="testimonials-avatar-box">
+                  <img src="https://raw.githubusercontent.com/codewithsadee/vcard-personal-portfolio/master/assets/images/avatar-4.png" alt="Henry william" width="60" data-testimonials-avatar>
+                </figure>
+
+                <h4 class="h4 testimonials-item-title" data-testimonials-title>Henry william</h4>
+
+                <div class="testimonials-text" data-testimonials-text>
+                  <p>
+                    Soman was hired to create a corporate identity. We were very pleased with the work done. She has a
+                    lot of experience
+                    and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt
+                    consectetur adipiscing
+                    elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.
+                  </p>
+                </div>
+
+              </div>
+            </li>
+
+          </ul>
+
+        </section>
+
+
+        <!--
+          - testimonials modal
+        -->
+
+        <div class="modal-container" data-modal-container>
+
+          <div class="overlay" data-overlay></div>
+
+          <section class="testimonials-modal">
+
+            <button class="modal-close-btn" data-modal-close-btn>
+              <ion-icon name="close-outline"></ion-icon>
+            </button>
+
+            <div class="modal-img-wrapper">
+              <figure class="modal-avatar-box">
+                <img src="https://raw.githubusercontent.com/codewithsadee/vcard-personal-portfolio/master/assets/images/avatar-1.png" alt="Daniel lewis" width="80" data-modal-img>
+              </figure>
+
+              <img src="https://raw.githubusercontent.com/codewithsadee/vcard-personal-portfolio/master/assets/images/icon-quote.svg" alt="quote icon">
+            </div>
+
+            <div class="modal-content">
+
+              <h4 class="h3 modal-title" data-modal-title>Daniel lewis</h4>
+
+              <time datetime="2021-06-14">14 June, 2021</time>
+
+              <div data-modal-text>
+                <p>
+                  Soman was hired to create a corporate identity. We were very pleased with the work done. She has a
+                  lot of experience
+                  and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt
+                  consectetur adipiscing
+                  elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.
+                </p>
+              </div>
+
+            </div>
+
+          </section>
+
+        </div>
+
+
+        <!--
+          - clients
+        -->
+
+        <section class="clients">
+
+          <h3 class="h3 clients-title">Clients</h3>
+
+          <ul class="clients-list has-scrollbar">
+
+            <li class="clients-item">
+              <a href="#">
+                <img src="https://raw.githubusercontent.com/codewithsadee/vcard-personal-portfolio/master/assets/images/logo-1-color.png" alt="client logo">
+              </a>
+            </li>
+
+            <li class="clients-item">
+              <a href="#">
+                <img src="https://raw.githubusercontent.com/codewithsadee/vcard-personal-portfolio/master/assets/images/logo-2-color.png" alt="client logo">
+              </a>
+            </li>
+
+            <li class="clients-item">
+              <a href="#">
+                <img src="https://raw.githubusercontent.com/codewithsadee/vcard-personal-portfolio/master/assets/images/logo-3-color.png" alt="client logo">
+              </a>
+            </li>
+
+            <li class="clients-item">
+              <a href="#">
+                <img src="https://raw.githubusercontent.com/codewithsadee/vcard-personal-portfolio/master/assets/images/logo-4-color.png" alt="client logo">
+              </a>
+            </li>
+
+            <li class="clients-item">
+              <a href="#">
+                <img src="https://raw.githubusercontent.com/codewithsadee/vcard-personal-portfolio/master/assets/images/logo-5-color.png" alt="client logo">
+              </a>
+            </li>
+
+            <li class="clients-item">
+              <a href="#">
+                <img src="https://raw.githubusercontent.com/codewithsadee/vcard-personal-portfolio/master/assets/images/logo-6-color.png" alt="client logo">
+              </a>
+            </li>
+
+          </ul>
+
+        </section>
+
+      </article>
+
+
+
+
+
+      <!--
+        - #RESUME
+      -->
+
+      <article class="resume" data-page="resume">
+
+        <header>
+          <h2 class="h2 article-title">Resume</h2>
+        </header>
+
+        <section class="timeline">
+
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="book-outline"></ion-icon>
+            </div>
+
+            <h3 class="h3">Education</h3>
+          </div>
+
+          <ol class="timeline-list">
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">University school of the arts</h4>
+
+              <span>2007 — 2008</span>
+
+              <p class="timeline-text">
+                Nemo enims ipsam voluptatem, blanditiis praesentium voluptum delenit atque corrupti, quos dolores et
+                quas molestias
+                exceptur.
+              </p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">New york academy of art</h4>
+
+              <span>2006 — 2007</span>
+
+              <p class="timeline-text">
+                Ratione voluptatem sequi nesciunt, facere quisquams facere menda ossimus, omnis voluptas assumenda est
+                omnis..
+              </p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">High school of art and design</h4>
+
+              <span>2002 — 2004</span>
+
+              <p class="timeline-text">
+                Duis aute irure dolor in reprehenderit in voluptate, quila voluptas mag odit aut fugit, sed consequuntur
+                magni dolores
+                eos.
+              </p>
+
+            </li>
+
+          </ol>
+
+        </section>
+
+        <section class="timeline">
+
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="book-outline"></ion-icon>
+            </div>
+
+            <h3 class="h3">Experience</h3>
+          </div>
+
+          <ol class="timeline-list">
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Creative director</h4>
+
+              <span>2015 — Present</span>
+
+              <p class="timeline-text">
+                Nemo enim ipsam voluptatem blanditiis praesentium voluptum delenit atque corrupti, quos dolores et qvuas
+                molestias
+                exceptur.
+              </p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Art director</h4>
+
+              <span>2013 — 2015</span>
+
+              <p class="timeline-text">
+                Nemo enims ipsam voluptatem, blanditiis praesentium voluptum delenit atque corrupti, quos dolores et
+                quas molestias
+                exceptur.
+              </p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Web designer</h4>
+
+              <span>2010 — 2013</span>
+
+              <p class="timeline-text">
+                Nemo enims ipsam voluptatem, blanditiis praesentium voluptum delenit atque corrupti, quos dolores et
+                quas molestias
+                exceptur.
+              </p>
+
+            </li>
+
+          </ol>
+
+        </section>
+
+        <section class="skill">
+
+          <h3 class="h3 skills-title">My skills</h3>
+
+          <ul class="skills-list content-card">
+
+            <li class="skills-item">
+
+              <div class="title-wrapper">
+                <h5 class="h5">Web design</h5>
+                <data value="80">80%</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 80%;"></div>
+              </div>
+
+            </li>
+
+            <li class="skills-item">
+
+              <div class="title-wrapper">
+                <h5 class="h5">Graphic design</h5>
+                <data value="70">70%</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 70%;"></div>
+              </div>
+
+            </li>
+
+            <li class="skills-item">
+
+              <div class="title-wrapper">
+                <h5 class="h5">Branding</h5>
+                <data value="90">90%</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 90%;"></div>
+              </div>
+
+            </li>
+
+            <li class="skills-item">
+
+              <div class="title-wrapper">
+                <h5 class="h5">WordPress</h5>
+                <data value="50">50%</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 50%;"></div>
+              </div>
+
+            </li>
+
+          </ul>
+
+        </section>
+
+      </article>
+
+
+
+
+
+      <!--
+        - #PORTFOLIO
+      -->
+
+      <article class="portfolio" data-page="portfolio">
+
+        <header>
+          <h2 class="h2 article-title">Portfolio</h2>
+        </header>
+
+        <section class="projects">
+
+          <ul class="filter-list">
+
+            <li class="filter-item">
+              <button class="active" data-filter-btn>All</button>
+            </li>
+
+            <li class="filter-item">
+              <button data-filter-btn>Web design</button>
+            </li>
+
+            <li class="filter-item">
+              <button data-filter-btn>Applications</button>
+            </li>
+
+            <li class="filter-item">
+              <button data-filter-btn>Web development</button>
+            </li>
+
+          </ul>
+
+          <div class="filter-select-box">
+
+            <button class="filter-select" data-select>
+
+              <div class="select-value" data-selecct-value>Select category</div>
+
+              <div class="select-icon">
+                <ion-icon name="chevron-down"></ion-icon>
+              </div>
+
+            </button>
+
+            <ul class="select-list">
+
+              <li class="select-item">
+                <button data-select-item>All</button>
+              </li>
+
+              <li class="select-item">
+                <button data-select-item>Web design</button>
+              </li>
+
+              <li class="select-item">
+                <button data-select-item>Applications</button>
+              </li>
+
+              <li class="select-item">
+                <button data-select-item>Web development</button>
+              </li>
+
+            </ul>
+
+          </div>
+
+          <ul class="project-list">
+
+            <li class="project-item  active" data-filter-item data-category="web development">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="https://raw.githubusercontent.com/codewithsadee/vcard-personal-portfolio/master/assets/images/project-1.jpg" alt="finance" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Finance</h3>
+
+                <p class="project-category">Web development</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="web development">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="https://raw.githubusercontent.com/codewithsadee/vcard-personal-portfolio/master/assets/images/project-2.png" alt="orizon" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Orizon</h3>
+
+                <p class="project-category">Web development</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="web design">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="https://raw.githubusercontent.com/codewithsadee/vcard-personal-portfolio/master/assets/images/project-3.jpg" alt="fundo" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Fundo</h3>
+
+                <p class="project-category">Web design</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="applications">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="https://raw.githubusercontent.com/codewithsadee/vcard-personal-portfolio/master/assets/images/project-4.png" alt="brawlhalla" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Brawlhalla</h3>
+
+                <p class="project-category">Applications</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="web design">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="https://raw.githubusercontent.com/codewithsadee/vcard-personal-portfolio/master/assets/images/project-5.png" alt="dsm." loading="lazy">
+                </figure>
+
+                <h3 class="project-title">DSM.</h3>
+
+                <p class="project-category">Web design</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="web design">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="https://raw.githubusercontent.com/codewithsadee/vcard-personal-portfolio/master/assets/images/project-6.png" alt="metaspark" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">MetaSpark</h3>
+
+                <p class="project-category">Web design</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="web development">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="https://raw.githubusercontent.com/codewithsadee/vcard-personal-portfolio/master/assets/images/project-7.png" alt="summary" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Summary</h3>
+
+                <p class="project-category">Web development</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="applications">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="https://raw.githubusercontent.com/codewithsadee/vcard-personal-portfolio/master/assets/images/project-8.jpg" alt="task manager" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Task Manager</h3>
+
+                <p class="project-category">Applications</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="web development">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="https://raw.githubusercontent.com/codewithsadee/vcard-personal-portfolio/master/assets/images/project-9.png" alt="arrival" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Arrival</h3>
+
+                <p class="project-category">Web development</p>
+
+              </a>
+            </li>
+
+          </ul>
+
+        </section>
+
+      </article>
+
+
+
+
+
+      <!--
+        - #BLOG
+      -->
+
+      <article class="blog" data-page="blog">
+
+        <header>
+          <h2 class="h2 article-title">Blog</h2>
+        </header>
+
+        <section class="blog-posts">
+
+          <ul class="blog-posts-list">
+
+            <li class="blog-post-item">
+              <a href="#">
+
+                <figure class="blog-banner-box">
+                  <img src="https://raw.githubusercontent.com/codewithsadee/vcard-personal-portfolio/master/assets/images/blog-1.jpg" alt="Design conferences in 2022" loading="lazy">
+                </figure>
+
+                <div class="blog-content">
+
+                  <div class="blog-meta">
+                    <p class="blog-category">Design</p>
+
+                    <span class="dot"></span>
+
+                    <time datetime="2022-02-23">Fab 23, 2022</time>
+                  </div>
+
+                  <h3 class="h3 blog-item-title">Design conferences in 2022</h3>
+
+                  <p class="blog-text">
+                    Veritatis et quasi architecto beatae vitae dicta sunt, explicabo.
+                  </p>
+
+                </div>
+
+              </a>
+            </li>
+
+            <li class="blog-post-item">
+              <a href="#">
+
+                <figure class="blog-banner-box">
+                  <img src="https://raw.githubusercontent.com/codewithsadee/vcard-personal-portfolio/master/assets/images/blog-2.jpg" alt="Best fonts every designer" loading="lazy">
+                </figure>
+
+                <div class="blog-content">
+
+                  <div class="blog-meta">
+                    <p class="blog-category">Design</p>
+
+                    <span class="dot"></span>
+
+                    <time datetime="2022-02-23">Fab 23, 2022</time>
+                  </div>
+
+                  <h3 class="h3 blog-item-title">Best fonts every designer</h3>
+
+                  <p class="blog-text">
+                    Sed ut perspiciatis, nam libero tempore, cum soluta nobis est eligendi.
+                  </p>
+
+                </div>
+
+              </a>
+            </li>
+
+            <li class="blog-post-item">
+              <a href="#">
+
+                <figure class="blog-banner-box">
+                  <img src="https://raw.githubusercontent.com/codewithsadee/vcard-personal-portfolio/master/assets/images/blog-3.jpg" alt="Design digest #80" loading="lazy">
+                </figure>
+
+                <div class="blog-content">
+
+                  <div class="blog-meta">
+                    <p class="blog-category">Design</p>
+
+                    <span class="dot"></span>
+
+                    <time datetime="2022-02-23">Fab 23, 2022</time>
+                  </div>
+
+                  <h3 class="h3 blog-item-title">Design digest #80</h3>
+
+                  <p class="blog-text">
+                    Excepteur sint occaecat cupidatat no proident, quis nostrum exercitationem ullam corporis suscipit.
+                  </p>
+
+                </div>
+
+              </a>
+            </li>
+
+            <li class="blog-post-item">
+              <a href="#">
+
+                <figure class="blog-banner-box">
+                  <img src="https://raw.githubusercontent.com/codewithsadee/vcard-personal-portfolio/master/assets/images/blog-4.jpg" alt="UI interactions of the week" loading="lazy">
+                </figure>
+
+                <div class="blog-content">
+
+                  <div class="blog-meta">
+                    <p class="blog-category">Design</p>
+
+                    <span class="dot"></span>
+
+                    <time datetime="2022-02-23">Fab 23, 2022</time>
+                  </div>
+
+                  <h3 class="h3 blog-item-title">UI interactions of the week</h3>
+
+                  <p class="blog-text">
+                    Enim ad minim veniam, consectetur adipiscing elit, quis nostrud exercitation ullamco laboris nisi.
+                  </p>
+
+                </div>
+
+              </a>
+            </li>
+
+            <li class="blog-post-item">
+              <a href="#">
+
+                <figure class="blog-banner-box">
+                  <img src="https://raw.githubusercontent.com/codewithsadee/vcard-personal-portfolio/master/assets/images/blog-5.jpg" alt="The forgotten art of spacing" loading="lazy">
+                </figure>
+
+                <div class="blog-content">
+
+                  <div class="blog-meta">
+                    <p class="blog-category">Design</p>
+
+                    <span class="dot"></span>
+
+                    <time datetime="2022-02-23">Fab 23, 2022</time>
+                  </div>
+
+                  <h3 class="h3 blog-item-title">The forgotten art of spacing</h3>
+
+                  <p class="blog-text">
+                    Maxime placeat, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  </p>
+
+                </div>
+
+              </a>
+            </li>
+
+            <li class="blog-post-item">
+              <a href="#">
+
+                <figure class="blog-banner-box">
+                  <img src="https://raw.githubusercontent.com/codewithsadee/vcard-personal-portfolio/master/assets/images/blog-6.jpg" alt="Design digest #79" loading="lazy">
+                </figure>
+
+                <div class="blog-content">
+
+                  <div class="blog-meta">
+                    <p class="blog-category">Design</p>
+
+                    <span class="dot"></span>
+
+                    <time datetime="2022-02-23">Fab 23, 2022</time>
+                  </div>
+
+                  <h3 class="h3 blog-item-title">Design digest #79</h3>
+
+                  <p class="blog-text">
+                    Optio cumque nihil impedit uo minus quod maxime placeat, velit esse cillum.
+                  </p>
+
+                </div>
+
+              </a>
+            </li>
+
+          </ul>
+
+        </section>
+
+      </article>
+
+
+
+
+
+      <!--
+        - #CONTACT
+      -->
+
+      <article class="contact" data-page="contact">
+
+        <header>
+          <h2 class="h2 article-title">Contact</h2>
+        </header>
+
+        <section class="mapbox" data-mapbox>
+          <figure>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d199666.5651251294!2d-121.58334177520186!3d38.56165006739519!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x809ac672b28397f9%3A0x921f6aaa74197fdb!2sSacramento%2C%20CA%2C%20USA!5e0!3m2!1sen!2sbd!4v1647608789441!5m2!1sen!2sbd"
+              width="400" height="300" loading="lazy"></iframe>
+          </figure>
+        </section>
+
+        <section class="contact-form">
+
+          <h3 class="h3 form-title">Contact Form</h3>
+
+          <form action="#" class="form" data-form>
+
+            <div class="input-wrapper">
+              <input type="text" name="fullname" class="form-input" placeholder="Full name" required data-form-input>
+
+              <input type="email" name="email" class="form-input" placeholder="Email address" required data-form-input>
+            </div>
+
+            <textarea name="message" class="form-input" placeholder="Your Message" required data-form-input></textarea>
+
+            <button class="form-btn" type="submit" disabled data-form-btn>
+              <ion-icon name="paper-plane"></ion-icon>
+              <span>Send Message</span>
+            </button>
+
+          </form>
+
+        </section>
+
+      </article>
+
     </div>
+
   </main>
 
-  <footer>
-    <div class="wrap"><span>© <span id="year"></span> Soman Khadka. All rights reserved.</span><span>Made with care in Nepal · somankhadka.com.np</span></div>
-  </footer>
-  <script>
-    const menuButton = document.getElementById('menuButton');
-    const navLinks = document.getElementById('navLinks');
-    menuButton.addEventListener('click', () => {
-      const open = navLinks.classList.toggle('open');
-      menuButton.setAttribute('aria-expanded', String(open));
-    });
-    navLinks.querySelectorAll('a').forEach(link => link.addEventListener('click', () => {
-      navLinks.classList.remove('open');
-      menuButton.setAttribute('aria-expanded', 'false');
-    }));
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
+
+
+
+
+
+  <!--
+    - custom js link
+  -->
+  <script src="./assets/js/script.js"></script>
+
+  <!--
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
 </body>
+
 </html>
